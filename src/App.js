@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import GlobalStyle from './assets/GlobalStyle'
+import Container from './components/styles/Container'
+import Category from './components/Category'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Container>
+      <h1>Select your favorite movies of 2023 :)</h1>
+      <GlobalStyle />
+      <Category />
+      <Category />
+    </Container>
+  )
 }
 
-export default App;
+export default App
