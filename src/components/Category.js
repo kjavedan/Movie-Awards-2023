@@ -2,11 +2,11 @@ import React from 'react'
 import Movies from './Movies'
 import StyledCategory from './styles/Category.styled'
 
-const Category = () => {
+const Category = ({title, movies}) => {
   return (
     <StyledCategory>
-        <h2>Comedy</h2>
-        <Movies />
+        <h2>{title}</h2>
+        <Movies movies={movies} />
     </StyledCategory>
   )
 }

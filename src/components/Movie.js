@@ -1,11 +1,11 @@
 import React from 'react'
 import StyledMovie from './styles/Movie.styled'
 
-const Movie = () => {
+const Movie = ({id, title, img}) => {
+
   return (
-    <StyledMovie>
-        <h3>title</h3>
-        <img src="" alt="movie1 image" />
+    <StyledMovie img={img}>
+        <h3>{title}</h3>
         <button>select</button>
     </StyledMovie>
   )

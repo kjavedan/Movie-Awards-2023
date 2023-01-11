@@ -19,7 +19,8 @@ const GlobalStyle = createGlobalStyle`
     font-size: 2em;
   }
   h3{
-    font-size: 1.75em;
+    font-size: 1.25em;
+    font-weight: 400;
   }
   h4{
     font-size: 1.5em;
@@ -36,9 +37,6 @@ const GlobalStyle = createGlobalStyle`
   }
   @media (min-width: 992px) {
   
-  h4{
-    font-size: 1.75em;
-  }
   h5{
     font-size: 1.5em;
   }
