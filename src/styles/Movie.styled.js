@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledMovie = styled.div`
 height: 350px;
-min-width: 350px;
+min-width: 300px;
 border: ${({highlight}) => highlight && '5px solid red'};
 border-radius: 22px;
 display: flex;

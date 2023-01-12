@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledMovies = styled.div`
-width: 100%;
+/* width: 100%; */
 margin-top: 1.5rem;
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
