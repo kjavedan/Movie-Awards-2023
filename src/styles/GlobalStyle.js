@@ -11,6 +11,10 @@ const GlobalStyle = createGlobalStyle`
   scroll-behavior: smooth;
   
 
+  p{
+    color: gray;
+  }
+  
   @media (min-width: 688px) {
   h1{
     font-size: 2.5em;

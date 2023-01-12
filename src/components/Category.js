@@ -6,9 +6,6 @@ import StyledCategory from '../styles/Category.styled'
 
 const Category = ({title, movies}) => {
 
-
-  const [result, setResult] = useState([])
-
   return (
     <StyledCategory>
         <h2>{title}</h2>
