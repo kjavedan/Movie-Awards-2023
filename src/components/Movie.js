@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import StyledMovie from '../styles/Movie.styled'
 
 const Movie = ({id, title, img, isHeld, selectMovie}) => {

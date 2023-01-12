@@ -10,7 +10,6 @@ const GlobalStyle = createGlobalStyle`
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
   
-
   p{
     color: gray;
   }

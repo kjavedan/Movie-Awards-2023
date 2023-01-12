@@ -9,7 +9,6 @@ h1{
     margin-bottom: 6rem;
 }
 
-
 @media (min-width: 1250px) {
     width: 1200px;
     margin: 0 auto;

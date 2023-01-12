@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import Skeleton from 'react-loading-skeleton'
+import React from 'react'
 import 'react-loading-skeleton/dist/skeleton.css'
 import Movies from './Movies'
 import StyledCategory from '../styles/Category.styled'

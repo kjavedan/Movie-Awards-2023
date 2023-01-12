@@ -28,7 +28,6 @@ h3{
     background-color: white;
     padding: .5rem 1.5rem;
     border-radius: 15px;
-    
 }
 /* movie button */
 button{

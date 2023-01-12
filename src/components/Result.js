@@ -8,10 +8,8 @@ const Result = () => {
 
     const {result, setDisplayResult} = useContext(Context)
 
-    console.log(result)
-
     const resultItems = result.map(item => <ResultRow title={item.title} name={item.movie.name} img={item.movie.img} />)
-    console.log(resultItems)
+    
   return (
     <>
     <CloseResult onClick={()=> setDisplayResult(false)}></CloseResult>

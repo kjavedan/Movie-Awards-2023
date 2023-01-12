@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext} from 'react'
 import GlobalStyle from './styles/GlobalStyle'
 import Container from './styles/Container.styled'
 import Category from './components/Category'
@@ -10,7 +10,7 @@ import Result from './components/Result'
 const App = () => {
   
   const {categories, isLoading, submitResult, displayResult} = useContext(Context)
-
+  
   const categoryElements = categories.map(category => <Category key={category.id} title={category.title} movies={category.movies}/>)
  
   return (
