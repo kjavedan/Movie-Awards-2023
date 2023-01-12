@@ -1,8 +1,8 @@
 import Skeleton from 'react-loading-skeleton'
 import React from 'react'
 import Movie from './Movie'
-import StyledCategory from './styles/Category.styled'
-import StyledMovies from './styles/Movies.styled'
+import StyledCategory from '../styles/Category.styled'
+import StyledMovies from '../styles/Movies.styled'
 
 const LoadingSkeleton = () => {
   return (

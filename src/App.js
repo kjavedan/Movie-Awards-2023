@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import GlobalStyle from './assets/GlobalStyle'
-import Container from './components/styles/Container'
+import GlobalStyle from './styles/GlobalStyle'
+import Container from './styles/Container.styled'
 import Category from './components/Category'
 import LoadingSkeleton from './components/LoadingSkeleton'
 
 const App = () => {
   
   const [categories, setCategories] = useState([])
-
   const [isLoading, setIsLoading] = useState(true)
 
-  const categoryElements = categories.map(category => <Category key={category.id} title={category.title} movies={category.movies} isLoading={isLoading}/>)
-  
-  console.log(isLoading)
-  console.log(categories)
+  const categoryElements = categories.map(category => <Category key={category.id} title={category.title} movies={category.movies}/>)
+ 
   useEffect(()=> {
     fetch('https://api.jsonbin.io/v3/b/63bf2d65dfc68e59d57fef4a')
     .then(res => res.json())
@@ -22,7 +19,6 @@ const App = () => {
       setIsLoading(false)
     })
     }, [])
-
 
   return (
     <Container>

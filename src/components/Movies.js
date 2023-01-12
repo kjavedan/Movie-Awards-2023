@@ -1,10 +1,31 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Movie from './Movie'
-import StyledMovies from './styles/Movies.styled'
+import StyledMovies from '../styles/Movies.styled'
 
-const Movies = ({movies}) => {
+const Movies = ({movies, title}) => {
+  
+  const [eachCategoryMovies, setEachCategoryMovies] = useState(movies)
 
-    const movieElements = movies.map(movie => <Movie key={movie.id} id={movie.id} title={movie.title} img={movie.img} />)
+  const selectMovie = (e, id) => {
+    console.log(id)
+    console.log(title)
+    console.log(eachCategoryMovies)
+
+    setEachCategoryMovies(prevState => prevState.map(movie => movie.id === id ? {...movie, isHeld: !movie.isHeld} : {...movie, isHeld: false} ))
+  }
+
+
+    const movieElements = eachCategoryMovies.map(movie => <Movie 
+      key={movie.id} 
+      id={movie.id} 
+      title={movie.title} 
+      img={movie.img} 
+      isHeld={movie.isHeld} 
+      selectMovie={selectMovie} 
+      />)
+
+
+
 
   return (
    <StyledMovies>
