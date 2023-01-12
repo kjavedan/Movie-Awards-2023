@@ -1,18 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import GlobalStyle from './assets/GlobalStyle'
 import Container from './components/styles/Container'
 import Category from './components/Category'
-import { cateoies } from './data'
+import LoadingSkeleton from './components/LoadingSkeleton'
 
 const App = () => {
+  
+  const [categories, setCategories] = useState([])
 
-  const categoryElements = cateoies.map(category => <Category key={category.id} title={category.title} movies={category.movies} />)
+  const [isLoading, setIsLoading] = useState(true)
+
+  const categoryElements = categories.map(category => <Category key={category.id} title={category.title} movies={category.movies} isLoading={isLoading}/>)
+  
+  console.log(isLoading)
+  console.log(categories)
+  useEffect(()=> {
+    fetch('https://api.jsonbin.io/v3/b/63bf2d65dfc68e59d57fef4a')
+    .then(res => res.json())
+    .then(res => {
+      setCategories(res.record.data)
+      setIsLoading(false)
+    })
+    }, [])
+
 
   return (
     <Container>
       <GlobalStyle />
       <h1>Select your favorite movies of 2023 :)</h1>
-      {categoryElements}
+      {isLoading ? <LoadingSkeleton /> : categoryElements}
     </Container>
   )
 }
